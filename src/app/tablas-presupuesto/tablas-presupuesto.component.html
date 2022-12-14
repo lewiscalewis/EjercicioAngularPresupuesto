@@ -1,0 +1,17 @@
+<div class="tablas">
+    <table>
+        <th>INGRESOS</th>
+        <tr *ngFor="let ingreso of ingresos">
+          <td>{{ingreso.entidad}}</td>
+          <td>{{ingreso.cantidad}}</td>
+        </tr>
+    </table>
+
+    <table>
+        <th>GASTOS</th>
+        <tr *ngFor="let gasto of gastos">
+          <td>{{gasto.entidad}}</td>
+          <td>{{gasto.cantidad}}</td>
+        </tr>
+    </table>
+</div>

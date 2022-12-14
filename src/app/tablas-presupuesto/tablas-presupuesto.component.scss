@@ -1,0 +1,32 @@
+.tablas {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+  font-family: 'Chivo Mono', monospace;
+
+  table {
+    background-color: #1c0097;
+    max-width: 400px;
+    min-width: 200px;
+    text-align: center;
+    border-collapse: collapse;
+    height: fit-content;
+
+    th {
+      text-align: center;
+      color: white;
+    }
+
+    tr:nth-child(odd) {
+      background-color: white;
+      color: black;
+    }
+
+    tr:nth-child(even) {
+      background-color: darkgrey;
+      color: white;
+    }
+
+  }
+}

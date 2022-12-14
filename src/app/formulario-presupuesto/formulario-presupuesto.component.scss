@@ -1,0 +1,24 @@
+.formulario {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
+  justify-content: center;
+
+  input {
+    font-family: 'Chivo Mono', monospace;
+  }
+
+  button {
+    background-color: rgba(95, 253, 109, 0.808);
+    border: 0px;
+    border-radius: 4px;
+    padding: 0.5em;
+    width: 100px;
+    font-family: 'Chivo Mono', monospace;
+
+    &:hover{
+      width: 105px;
+      height: 33px
+    }
+  }
+}

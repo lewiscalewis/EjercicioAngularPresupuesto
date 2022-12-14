@@ -1,0 +1,10 @@
+<div class="formulario">
+  <select name="select" [(ngModel)]="tipo_entrada">
+    <option value="gasto">-</option>
+    <option value="ingreso" selected>+</option>
+  </select>
+    <input type="text" [(ngModel)]="entidad">
+    <input type="number" [(ngModel)]="cantidad">
+
+    <button (click)="guardarDatos()">Guardar</button>
+</div>

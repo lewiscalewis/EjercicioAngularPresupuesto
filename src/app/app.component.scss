@@ -1,0 +1,83 @@
+.muestra-presupuesto {
+
+  padding: 2em;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  width: 100%;
+  color: white;
+  font-family: 'Chivo Mono', monospace;
+
+  .muestra-total {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+
+    h3 {
+      font-size: x-large;
+    }
+
+    .saldo {
+      font-size: xx-large;
+    }
+  }
+
+  .muestra-ingresos {
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 6px;
+    color: black;
+    background: linear-gradient(0deg, rgb(255, 207, 50) 0%, rgb(0, 199, 83) 100%);
+  }
+
+  .muestra-gastos {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 6px;
+    color: black;
+    background: linear-gradient(0deg, rgb(255, 166, 0) 10%, rgb(255, 1, 1) 70%);
+
+    div {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      text-align: center;
+      justify-content: center;
+
+      p {
+        max-width: 100px;
+      }
+
+      .porcentaje{
+        border-radius: 8px;
+        padding: 10px 10px 10px 10px;
+        opacity: 0.7;
+        background-color: whitesmoke;
+        font-size: xx-small;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.container {
+  margin: auto;
+  max-width: 960px;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
