@@ -1,6 +1,8 @@
 .tablas {
+  max-width: 960px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 50px;
   justify-content: center;
   font-family: 'Chivo Mono', monospace;

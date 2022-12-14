@@ -73,11 +73,24 @@
   }
 }
 
-.container {
-  margin: auto;
-  max-width: 960px;
+.formulario {
+  width: 100%;
   padding: 2em;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 30px;
+  background-color: whitesmoke;
+}
+
+.tablas {
+  width: 100%;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  background-color: whitesmoke;
 }

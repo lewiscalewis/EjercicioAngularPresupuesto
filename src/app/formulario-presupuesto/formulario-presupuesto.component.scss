@@ -1,7 +1,9 @@
 @mixin formulario-mixin($color-validacion) {
   display: flex;
   flex-wrap: nowrap;
+  max-width: 960px;
   gap: 30px;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   height: fit-content;
