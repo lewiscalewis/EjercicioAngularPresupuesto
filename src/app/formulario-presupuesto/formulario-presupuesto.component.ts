@@ -13,6 +13,7 @@ export class FormularioPresupuestoComponent implements OnInit {
   entidad: string = "";
   cantidad: number = 0;
   formularioService: FormularioPresupuestoService;
+  validacion: boolean = true;
 
   constructor(formularioService: FormularioPresupuestoService) {
     this.formularioService = formularioService;
@@ -23,7 +24,18 @@ export class FormularioPresupuestoComponent implements OnInit {
   }
 
   guardarDatos(){
-    this.formularioService.enviarDatos(new FormularioPresupuesto(this.tipo_entrada, this.entidad, this.cantidad))
+    if(this.entidad != '' && this.cantidad != 0 && this.tipo_entrada != ''){
+      console.log(
+        this.cantidad,
+        this.entidad,
+        this.tipo_entrada
+      )
+      this.formularioService.enviarDatos(new FormularioPresupuesto(this.tipo_entrada, this.entidad, this.cantidad))
+      this.validacion = true;
+    }else{
+      this.validacion = false;
+      alert("¡Debe rellenar los campos obligatorios!")
+    }
   }
 
 }

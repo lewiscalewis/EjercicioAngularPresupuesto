@@ -1,24 +1,87 @@
-.formulario {
+@mixin formulario-mixin($color-validacion) {
   display: flex;
   flex-wrap: nowrap;
   gap: 30px;
   justify-content: center;
+  align-items: center;
+  height: fit-content;
 
   input {
     font-family: 'Chivo Mono', monospace;
+    height: 30px;
   }
+
+  select {
+    height: 30px;
+    width: 30px;
+  }
+
+  // button {
+  //   background-color: rgba(95, 253, 109, 0.808);
+  //   border: 0px;
+  //   border-radius: 4px;
+  //   padding: 0.5em;
+  //   width: 100px;
+  //   font-family: 'Chivo Mono', monospace;
+
+  //   &:hover{
+  //     width: 105px;
+  //     height: 33px
+  //   }
+  // }
 
   button {
-    background-color: rgba(95, 253, 109, 0.808);
-    border: 0px;
-    border-radius: 4px;
-    padding: 0.5em;
-    width: 100px;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: transparent;
+    border: 2px solid $color-validacion;
+    border-radius: 0.6em;
+    color: $color-validacion;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    font-size: 8pt;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
     font-family: 'Chivo Mono', monospace;
 
-    &:hover{
-      width: 105px;
-      height: 33px
-    }
+    -webkit-transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
   }
+  button:hover, .button:focus {
+    color: #fff;
+    outline: 0;
+    box-shadow: 0 0 40px 40px $color-validacion inset;
+  }
+}
+
+.formulario {
+ @include formulario-mixin(rgb(151, 224, 40));
+}
+
+.validacionIncorrecta {
+  @include formulario-mixin(red);
+
+  select {
+    border: 1px solid red;
+  }
+
+  input {
+    border: 1px solid red;
+    box-shadow:  1px 1px 1px 1px red;
+  }
+
 }

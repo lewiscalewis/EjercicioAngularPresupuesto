@@ -1,4 +1,4 @@
-<div class="formulario">
+<div class="formulario" [ngClass]="{'validacionIncorrecta': validacion==false}">
   <select name="select" [(ngModel)]="tipo_entrada">
     <option value="gasto">-</option>
     <option value="ingreso" selected>+</option>
@@ -6,5 +6,5 @@
     <input type="text" [(ngModel)]="entidad">
     <input type="number" [(ngModel)]="cantidad">
 
-    <button (click)="guardarDatos()">Guardar</button>
+    <button (click)="guardarDatos()" type="submit">Guardar</button>
 </div>
